@@ -3,7 +3,7 @@ export function initialize() {
     init: function() {
       this._super();
       // Allow parsley data attributes
-      return Em.keys(this).forEach((function(_this) {
+      return Object.keys(this).forEach((function(_this) {
         return function(key) {
           if (key.substr(0, 12) === "data-parsley") {
             return _this.get("attributeBindings").pushObject(key);
